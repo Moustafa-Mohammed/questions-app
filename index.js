@@ -1,5 +1,6 @@
 let questionCount = 0;
 let correct = 0;
+let rightAnswer = "";
 const options = document.querySelector("#options");
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -27,8 +28,8 @@ const loadOptions = () =>
       (btn) =>
         (btn.onclick = () => {
           if (btn.textContent === questions[questionCount].answer) {
+            rightAnswer = btn.textContent;
             btn.classList.add("right");
-            console.log(btn.textContent);
             document.querySelector(
               "#question"
             ).innerHTML = `${btn.textContent} is right. click next to continue`;
@@ -43,7 +44,10 @@ const loadOptions = () =>
   });
 
 const loadNextQuestion = () => {
-  if (questionCount < questions.length - 1) {
+  if (
+    questionCount < questions.length - 1 &&
+    questions[questionCount].answer === rightAnswer
+  ) {
     questionCount++;
     loadQuestions();
     options.innerHTML = "";
