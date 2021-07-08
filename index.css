@@ -50,9 +50,14 @@ body {
 .btn-next {
   background-color: deepskyblue;
   color: #e7e7e7;
+  cursor: not-allowed;
 }
 
-.btn-previous {
+.btn-next:enabled {
+  cursor: pointer;
+}
+
+.btn-reset {
   background-color: coral;
   color: #e7e7e7;
 }
