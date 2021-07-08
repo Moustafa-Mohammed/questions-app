@@ -72,4 +72,5 @@ const resetQuestions = () => {
   loadQuestions();
   options.innerHTML = "";
   loadOptions();
+  loadScore();
 };
