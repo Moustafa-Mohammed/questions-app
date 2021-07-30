@@ -10,8 +10,8 @@ const questions = [
     answer: "Biden",
   },
   {
-    question: "Who is the current Egypt president?",
-    options: ["Sisi", "Morsi", "Mubarak", "Adli Mansour"],
+    question: "What is the capital of Egypt?",
+    options: ["Giza", "Alexandria", "Aswan", "Cairo"],
     answer: "Sisi",
   },
 ];
